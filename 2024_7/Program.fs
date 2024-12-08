@@ -1,57 +1,48 @@
-﻿open System.IO
+﻿type Operator =
+    | Add
+    | Multiply
+    | Concatenate
 
-let rec evaluateExpression numbers operators =
-    match numbers, operators with
-    | [x], [] -> x
-    | x::y::restNums, op::restOps ->
-        let result = 
-            match op with
-            | '+' -> x + y
-            | '*' -> x * y
-            | '|' -> int64 $"{x}{y}"
-            | _ -> failwith "Unsupported operator"
-        evaluateExpression (result :: restNums) restOps
-    | _ -> failwith "Invalid input"
+let apply a b operator =
+    match operator with
+    | Add -> a + b
+    | Multiply -> a * b
+    | Concatenate -> int64 ($"{a}{b}")
 
-let rec generateOperators length operators =
-    if length = 0 then [[]]
-    else
-        let smallerCombinations = generateOperators (length - 1) operators
-        smallerCombinations |> List.collect (fun ops -> operators |> List.map (fun op -> op :: ops))
+let canSolveWith operators (result, numbers) =
+    let rec canSolve stack =
+        match stack with
+        | [] -> false
+        | numbers :: stack ->
+            match numbers with
+            | [result'] when result' = result -> true
+            | [ _ ] -> canSolve stack
+            | a :: b :: numbers ->
+                let newStacks =
+                    operators
+                    |> List.fold (fun acc operator ->
+                        let value = apply a b operator
+                        if value > result then acc else (value :: numbers) :: acc) stack
+                canSolve newStacks
+            | _ -> failwith "Invalid stack"
+    canSolve [ numbers ]
 
-let canSolve targetValue numbers operators =
-    if List.isEmpty numbers then false
-    else
-        let numOperators = List.length numbers - 1
-        let operatorCombinations = generateOperators numOperators operators
-        operatorCombinations
-        |> List.exists (fun ops -> evaluateExpression numbers ops = targetValue)
+let parseEquation (line: string) =
+    match line.Split(": ") with
+    | [| result; numbers |] ->
+        (int64 result, numbers.Split(" ") |> Array.map int64 |> List.ofArray)
+    | _ -> failwith "Invalid equation format"
 
-let solveEquations equations =
-    let operatorsPart1 = ['+'; '*']
-    let operatorsPart2 = ['+'; '*'; '|']
-
+let solve equations operators =
     equations
-    |> List.fold (fun (part1Total, part2Total) (target, numbers) ->
-        let part1Valid = canSolve target numbers operatorsPart1
-        let part2Valid = canSolve target numbers operatorsPart2
-        let newPart1Total = if part1Valid then part1Total + target else part1Total
-        let newPart2Total = if part2Valid then part2Total + target else part2Total
-        (newPart1Total, newPart2Total)
-    ) (0L, 0L)
+    |> List.sumBy (fun equation ->
+        if canSolveWith operators equation then fst equation else 0L)
 
-let parseFile filePath =
-    File.ReadAllLines filePath
-    |> Array.map (fun line ->
-        let parts = line.Split(':')
-        if parts.Length <> 2 then failwith "Invalid line format"
-        let target = int64 (parts.[0].Trim())
-        let numbers = parts.[1].Trim().Split(' ') |> Array.map int64 |> Array.toList
-        (target, numbers))
-    |> Array.toList
+let input = System.IO.File.ReadAllLines("input-2024-7.txt")
+let equations = input |> Array.map parseEquation |> Array.toList
 
-let inputEquations = parseFile "input-2024-7.txt"
+let part1 = solve equations [ Add; Multiply ]
+let part2 = solve equations [ Add; Multiply; Concatenate ]
 
-let part1Total, part2Total = solveEquations inputEquations
-printfn $"Total calibration result (Part 1): {part1Total}" 
-printfn $"Total calibration result (Part 2): {part2Total}" 
+printfn $"Part 1 Total: {part1}" 
+printfn $"Part 2 Total: {part2}"
