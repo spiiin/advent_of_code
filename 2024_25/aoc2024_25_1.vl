@@ -1,0 +1,1080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="QG2EUobcTI9OpwzBCQn5ZE" LanguageVersion="2025.7.0" Version="0.128">
+  <NugetDependency Id="KeDZYtTzPbNLRsU3MwLeOh" Location="VL.CoreLib" Version="2025.7.0" />
+  <Patch Id="FMhJtwOB7sYQUQ4IxVMMiX">
+    <Canvas Id="H4JqkZoAmRxMrqeB8H0FvR" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Dr10O0svjF8NVpErfrnZlS">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="CULDILorU0RNklW7rrob2C">
+        <Canvas Id="SmmmictkECRLZJiPkwQhJO" CanvasType="Group">
+          <Pad Id="NmrRbdSAoo6PyxffkcJePe" Comment="" Bounds="410,250,62,95" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">5</p:maxvisibleentries>
+              <p:shownonprintablechars p:Type="Boolean">true</p:shownonprintablechars>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>#####[#13][#10].####[#13][#10].####[#13][#10].####[#13][#10].#.#.[#13][#10].#...[#13][#10].....</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="UV9dCzzVMD1PG1aCSpDS5G" Comment="File Path" Bounds="408,101,386,15" ShowValueBox="true" isIOBox="true" Value="aoc2024_25.txt">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="408,171,63,19" Id="P33AlQvDekDOz1UCtKoNKW">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FileReader (String)" />
+            </p:NodeReference>
+            <Pin Id="NOMoWoBbQBYNzeMXQBFKYj" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DsnYl5c6S1aMikWw9PJB7m" Name="File Path" Kind="InputPin" />
+            <Pin Id="MAXKc8zLXfSMJUw74wfpjj" Name="Encoding" Kind="InputPin" />
+            <Pin Id="FTBMieU7gn1MCCOov2qthV" Name="Read" Kind="InputPin" />
+            <Pin Id="ObzWKB1aFBZPoRTCwXGuV7" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="AtPPv4dKaEgLknoGgFSRnQ" Comment="Read" Bounds="468,131,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="408,210,71,19" Id="E4cl3y1tWUtLRRjJiKP6Yl">
+            <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="SplitToLines" />
+            </p:NodeReference>
+            <Pin Id="J6aQ51t70QEQEqAtqS34PE" Name="Input" Kind="StateInputPin" />
+            <Pin Id="PS4iJCSUQvtLWpWPZl38HJ" Name="Remove Empty Lines" Kind="InputPin" />
+            <Pin Id="JoPvRwCwQbjQByRauLrdma" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="292,417,547,650" Id="Dv2DWM2FcQ9LMcQrPrcFXP">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="BLFD92xM1HVM46NJZEdpve" Name="Break" Kind="OutputPin" />
+            <Patch Id="I4bvBtmdUqwQCD6CNqM8M3" ManuallySortedPins="true">
+              <Patch Id="HuPqbFuXE5gPlqwO9AULVk" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="Mgw3FsIQzZuMHX5yrlDhyO" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="Vqh4MkIaW87QcTOPIFPzdb" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="344,504,331,403" Id="Nu7jUG9Q6FdMCgbfqV8f4l">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="BGxc6Xw3pHGOkeClIwKSbU" Name="Break" Kind="OutputPin" />
+                <Patch Id="FgzmSJZa5FGPtwQ7aLaqLu" ManuallySortedPins="true">
+                  <Patch Id="GInU5uDtK9XPyZwAvd1FjY" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="AT7QrPdBrYmLc3yyu4yDeU" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="L9onSsvPoXfNmwn0rH0JMb" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="396,563,267,313" Id="GzzdzTEbiOYLYNW2Y7PQow">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                      <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Primitive" />
+                      <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    </p:NodeReference>
+                    <Pin Id="QNww22LTLZ1LKwvHRN3XqT" Name="Break" Kind="OutputPin" />
+                    <Patch Id="Mw0p7gFs8dePZZgiVmxyUQ" ManuallySortedPins="true">
+                      <Patch Id="P08pSmSx8nILUoFRyMo8Yv" Name="Create" ManuallySortedPins="true" />
+                      <Patch Id="L8b7ImmNwgKM00muXr0EcV" Name="Update" ManuallySortedPins="true">
+                        <Pin Id="Aiig4S3IkPkNbzZHhzeU3h" Name="Index" Kind="InputPin" />
+                      </Patch>
+                      <Patch Id="EObVsP9rhXcNzJJEJD1KWj" Name="Dispose" ManuallySortedPins="true" />
+                      <ControlPoint Id="DLBHUnojcwtM610TWGV3qv" Bounds="582,631" />
+                      <Node Bounds="538,670,113,138" Id="MNt2MKTLmQ6NJ6sC6GrI24">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                          <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                          <CategoryReference Kind="Category" Name="Primitive" />
+                          <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                        </p:NodeReference>
+                        <Pin Id="E6B9Y8X74HhMp4ekxZcced" Name="Condition" Kind="InputPin" />
+                        <Patch Id="MxuiWB8YYKWNn1jndq2sTg" ManuallySortedPins="true">
+                          <Patch Id="BvynNN41ib8OXi2L7tw9FU" Name="Create" ManuallySortedPins="true" />
+                          <Patch Id="AoCKm238YTAQbRZALF6i4x" Name="Then" ManuallySortedPins="true" />
+                          <Node Bounds="550,762,64,26" Id="DB27UyDur4EP0W2GfZVvaG">
+                            <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <CategoryReference Kind="ArrayType" Name="MutableArray" />
+                              <Choice Kind="OperationCallFlag" Name="SetItem" />
+                            </p:NodeReference>
+                            <Pin Id="Vuya8ECyBydOol4REs7bmu" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="KuLRyPXsBASLa1NIIqGLca" Name="Index" Kind="InputPin" />
+                            <Pin Id="J397dc231rkOrtZvxfXEBe" Name="Value" Kind="InputPin" />
+                            <Pin Id="Et2g14NTEDANMaepG72pbb" Name="Output" Kind="StateOutputPin" />
+                          </Node>
+                          <Node Bounds="550,693,64,26" Id="Hh4hJNur4DFN0HDzGXJDHB">
+                            <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
+                              <Choice Kind="OperationCallFlag" Name="GetItem" />
+                            </p:NodeReference>
+                            <Pin Id="Fyutv43xjXDOZhq151xtGh" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="F8y3KwuLaiZMg07uC4yGgP" Name="Index" Kind="InputPin" />
+                            <Pin Id="BairZi45p3gNryX2PB90Ny" Name="Output" Kind="StateOutputPin" />
+                            <Pin Id="KvUMZEnmLltLBBBl6JvktV" Name="Item" Kind="OutputPin" />
+                          </Node>
+                          <Node Bounds="609,732,30,19" Id="RTyDz7dVBJKNGdpnpB0XyB">
+                            <p:NodeReference LastCategoryFullName="Primitive.Integer32" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <CategoryReference Kind="Int32Type" Name="Integer32" NeedsToBeDirectParent="true" />
+                              <Choice Kind="OperationCallFlag" Name="Inc" />
+                            </p:NodeReference>
+                            <Pin Id="N3J4ItoSo3DMTnPXHfqxew" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="QYVOVoUwOEfLATzXLml1p4" Name="Output" Kind="StateOutputPin" />
+                          </Node>
+                        </Patch>
+                        <ControlPoint Id="GoJgq8vlmDzMR9hQm1m96d" Bounds="552,802" Alignment="Bottom" />
+                        <ControlPoint Id="ITtC2zvjkwbM6dfbbxYxYK" Bounds="552,676" Alignment="Top" />
+                      </Node>
+                      <Node Bounds="408,610,25,19" Id="MzmISReMjkoLHeA8pa6MLz">
+                        <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="OperationCallFlag" Name="=" />
+                        </p:NodeReference>
+                        <Pin Id="C90vTxk7XFtQLGPsGNJL4z" Name="Input" Kind="InputPin" />
+                        <Pin Id="MntWJvWAc18PwF7t4WiQZR" Name="Input 2" Kind="InputPin" />
+                        <Pin Id="MojkZEvnSCOOzwuttiHxbc" Name="Result" Kind="OutputPin" />
+                      </Node>
+                      <Pad Id="DhMNBkt28UZQR9ElDCV3HU" Comment="" Bounds="430,591,20,15" ShowValueBox="true" isIOBox="true" Value="#">
+                        <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="TypeFlag" Name="Char" />
+                        </p:TypeAnnotation>
+                      </Pad>
+                    </Patch>
+                    <ControlPoint Id="NQ2Y570XJToOvwMkEwrqZU" Bounds="410,569" Alignment="Top" />
+                    <ControlPoint Id="RLDPh0rItHzO7q6iDbYmtO" Bounds="552,870" Name="a" Alignment="Bottom" />
+                    <ControlPoint Id="S1HLJIE7KUePemW7JCOAsY" Bounds="552,569" Name="a" Alignment="Top" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="QLCil5sYrWiMObJVpJxZ1s" Bounds="552,510" Name="a" Alignment="Top" />
+                <ControlPoint Id="J2Lr8ZITH1HPRze8KxJNZR" Bounds="552,901" Name="a" Alignment="Bottom" />
+                <ControlPoint Id="CIeYZCiit8AOfVRDbKGC9w" Bounds="410,510" Alignment="Top" />
+              </Node>
+              <Node Bounds="550,460,64,26" Id="SFR72z9Spb0Op4DI5G6mGT">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ArrayType" Name="MutableArray" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="Nftb0XhZp4oP8F4NmplSW3" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="EqigCamI9tPPtKLuHToNUB" Name="Length" Kind="InputPin" DefaultValue="5" />
+                <Pin Id="O78YubXfR3fN7rpYY3GyRq" Name="Result" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="736,460,52,19" Id="F6879tOdqreNwiQ6ECz61d">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="GetSlice" />
+                </p:NodeReference>
+                <Pin Id="VasysGhUHnQNzC6lz6g0UD" Name="Input" Kind="StateInputPin" />
+                <Pin Id="C74uzx7z0X1PuYbu3ov1WU" Name="Default Value" Kind="InputPin" />
+                <Pin Id="HMkMe3mBAqnNFwrzgEaQOU" Name="Index" Kind="InputPin" />
+                <Pin Id="MOTZwqaGB4BLNbZRxUf86z" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="736,491,58,26" Id="ClhKeDzUUBIOigTYEhjeqT">
+                <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="StringType" Name="String" />
+                  <Choice Kind="OperationCallFlag" Name="GetChars" />
+                </p:NodeReference>
+                <Pin Id="QsbH8B12hb6OLDSowfp0oN" Name="Input" Kind="StateInputPin" />
+                <Pin Id="On80GP4b0AvMWvFfTZe2JX" Name="Index" Kind="InputPin" />
+                <Pin Id="HLT6AQNPU0NOueVG20Z7zk" Name="Chars" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="736,560,25,19" Id="DdaxJhzxVwJLUUVBM51C8J">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="FldVWcX8OhJMOwRXy7RWtO" Name="Input" Kind="InputPin" />
+                <Pin Id="R3JbLsa4jAcNhi9ypbs6xB" Name="Input 2" Kind="InputPin" />
+                <Pin Id="CB6HvyRrVFDPHhgHs645ez" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Pad Id="VyCoZwyr9eKLEgqkQKTyX4" Comment="" Bounds="758,540,20,15" ShowValueBox="true" isIOBox="true" Value="#">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Char" />
+                </p:TypeAnnotation>
+              </Pad>
+            </Patch>
+            <ControlPoint Id="OA8p88CvOODQAmLNcX9B4j" Bounds="552,1061" Alignment="Bottom" />
+            <ControlPoint Id="HrYOaTiGENANRj8UnlvCs2" Bounds="410,423" Alignment="Top" />
+            <ControlPoint Id="MvZtUUYvMtvPB1x32Yrt2T" Bounds="738,1061" Alignment="Bottom" />
+          </Node>
+          <Pad Id="GQ6FXL1ZZOTNKtenIJ5OYZ" Comment="" Bounds="488,1240,128,103" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">5</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>99, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+              <Item>0, 0, 0, 0, 0</Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="408,370,55,19" Id="CJQDArCTy1GNgYV2yQea1D">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="4026531840" Name="Spread" />
+              <Choice Kind="OperationCallFlag" Name="GroupBy (Length)" />
+            </p:NodeReference>
+            <Pin Id="FsD9pl5gDrjOMzizxLbsBH" Name="Input" Kind="InputPin" />
+            <Pin Id="U1BX0GIl8uhP56tOgSzmRx" Name="Item Count" Kind="InputPin" />
+            <Pin Id="CtSbilZWvVuP7gfv7wf0JX" Name="Transpose" Kind="InputPin" />
+            <Pin Id="GtRWy3FkQhzLF26tyjpJog" Name="Output" Kind="OutputPin" />
+            <Pin Id="HTxVESdnBzZLd2sL4Ugtig" Name="Remainder" Kind="OutputPin" />
+          </Node>
+          <Pad Id="CIjNLRR0CwSOAj87szdhY9" Comment="Item Count" Bounds="435,351,35,15" ShowValueBox="true" isIOBox="true" Value="7">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HPb6HI1LvkfP5lHwiYCJLJ" Comment="Remove Empty Lines" Bounds="491,181,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Fe4HIVcjmp9MZ8au9LsGXv" Comment="" Bounds="738,1100,47,95" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">5</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="724,1220,216,183" Id="IxqXQs0sdUUQcP3gCeC9Au">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="KkCZ9JfELbnLI3mlu3S0Pd" Name="Break" Kind="OutputPin" />
+            <Patch Id="KMIncaJlzwtLcuySNzdFD5" ManuallySortedPins="true">
+              <Patch Id="N8K2cphVq3KL6EUPxReYfF" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="IkjcA0SMgGNMwEWeD698d0" Name="Update" ManuallySortedPins="true">
+                <Pin Id="MqXeQDGKgpxMIJUmJO6Xjc" Name="Index" Kind="InputPin" />
+              </Patch>
+              <Patch Id="FZBrPsj2N1FNgv6AhqsNxb" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="759,1306,45,19" Id="MTS0i0KTLIdMWH9YiHYmtI">
+                <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Switch" />
+                </p:NodeReference>
+                <Pin Id="DdaKSKDhXnLNq7HPGDisAm" Name="Index" Kind="InputPin" />
+                <Pin Id="TrxxTByNAByMHsk91DF1r0" Name="Input" Kind="InputPin" />
+                <Pin Id="MOhCBhNWXwFPMd4Rb34ESH" Name="Input 2" Kind="InputPin" />
+                <Pin Id="GehBa3FYYVpPai2ssNdRqt" Name="Output" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="759,1346,57,26" Id="KLphYWJA9IOOGlU26k3yOC">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="MutableList" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Add" />
+                </p:NodeReference>
+                <Pin Id="NIrMDohbm0mNY5aeSdD1pe" Name="Input" Kind="StateInputPin" />
+                <Pin Id="AEj7JYzcWw9OCyvjVk8FCG" Name="Item" Kind="InputPin" />
+                <Pin Id="FmYhnzb8MFvOuKsmVKPqxr" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <ControlPoint Id="KESbjUEb0FgLevOkzI4f1R" Bounds="813,1326" />
+            </Patch>
+            <ControlPoint Id="LPS00nHJgKMQMIEfRxLhPU" Bounds="738,1226" Alignment="Top" />
+            <ControlPoint Id="VcbuhiVNu8aLlpUuby5Saj" Bounds="860,1226" Name="Locks" Alignment="Top" />
+            <ControlPoint Id="BVTzb1sIcsINp5AQAyO0Cp" Bounds="856,1397" Name="Locks" Alignment="Bottom" />
+            <ControlPoint Id="GS4QXftDiRRMAzLHPCajJr" Bounds="906,1226" Name="Keys" Alignment="Top" />
+            <ControlPoint Id="OSVQMxdvUgBQNhMlcjsB4Q" Bounds="906,1397" Name="Keys" Alignment="Bottom" />
+          </Node>
+          <Node Bounds="815,1156,79,19" Id="G518TyhSK2TN8WgT6qX1BX">
+            <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="MutableList" />
+              <Choice Kind="OperationCallFlag" Name="CreateDefault" />
+            </p:NodeReference>
+            <Pin Id="Gh4IFmcfZ4NLSxXSVuosdo" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="904,1156,79,19" Id="MqGH9FEmhvxMyRI2m0HP9H">
+            <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="MutableList" />
+              <Choice Kind="OperationCallFlag" Name="CreateDefault" />
+            </p:NodeReference>
+            <Pin Id="KKebBUqL3giQYEaJetefGU" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="R6aAc6XsZIkOF2SiaEP2H5" Comment="Keys" Bounds="950,1446,35,95" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="H6nbsErtZwBNa8IZOcz3Oj" Comment="Locks" Bounds="856,1446,35,95" ShowValueBox="true" isIOBox="true" />
+          <!--
+
+    ************************ CalculateCombinations ************************
+
+-->
+          <Node Name="CalculateCombinations" Bounds="-34,1118,455,589" Id="FG0UKtJJTgWO20yQK5ae41">
+            <p:NodeReference>
+              <Choice Kind="OperationDefinition" />
+            </p:NodeReference>
+            <Patch Id="QcRNHKBJs5GPAU6LpmiBXS">
+              <Node Bounds="18,1192,378,455" Id="Hslkc0wox63McAfg5Bfekm">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="BPBBwc0jOMFQHzZuNeGp7i" Name="Break" Kind="OutputPin" />
+                <Patch Id="QEyTz0hGqYyPYcXyAPqEDd" ManuallySortedPins="true">
+                  <Patch Id="QWThbaROTy8PYyNkRpZtjk" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="SGtci6T3KSKLxTOxSw0sY6" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="EcK2LHnhuFOPzK1Usk2c2U" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="130,1241,253,386" Id="AYeyFA9owsMNQ9zFpqrEXv">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                      <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Primitive" />
+                      <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    </p:NodeReference>
+                    <Pin Id="GNAPqlPVXunLH6DAZkUZsD" Name="Break" Kind="OutputPin" />
+                    <Patch Id="JHqDeAA2d76MK2NB5kNg8Y" ManuallySortedPins="true">
+                      <Patch Id="BC1N7TYIDQ9QOt9fkGd20I" Name="Create" ManuallySortedPins="true" />
+                      <Patch Id="EwPg40POzvWMXywzN43NJ5" Name="Update" ManuallySortedPins="true" />
+                      <Patch Id="AMIZwmj9m4aOcfwTlMfqGO" Name="Dispose" ManuallySortedPins="true" />
+                      <Node Bounds="143,1277,52,19" Id="PucDGU6kKt8Lgb1zrbu8rQ">
+                        <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
+                          <Choice Kind="OperationCallFlag" Name="GetSlice" />
+                        </p:NodeReference>
+                        <Pin Id="Bac3QYKqOd3OR84PFGu7Eu" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="AbQgWSoZNREQVNlFEbvd6y" Name="Default Value" Kind="InputPin" />
+                        <Pin Id="Ss5O83beY96O5dvoBHnh1e" Name="Index" Kind="InputPin" />
+                        <Pin Id="Kolcy4y6nkkN5RzgrB4Uqc" Name="Result" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="182,1331,106,105" Id="BHV7FuypKVxLFWF0cfDH3z">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                          <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                          <CategoryReference Kind="Category" Name="Primitive" />
+                          <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                        </p:NodeReference>
+                        <Pin Id="BZbWGFyJK3WLax79WvsQCz" Name="Break" Kind="OutputPin" />
+                        <Patch Id="KEp4nTodJl1LxvvvVGSTh7" ManuallySortedPins="true">
+                          <Patch Id="Kwh6ND0aJcFL9eSWgw1r9s" Name="Create" ManuallySortedPins="true" />
+                          <Patch Id="I8nHKfCY7DbOduuX3WMHck" Name="Update" ManuallySortedPins="true" />
+                          <Patch Id="MeuKv9G3nDpOtR1Z44X9UP" Name="Dispose" ManuallySortedPins="true" />
+                          <Node Bounds="194,1357,25,19" Id="Qnk2wXOZJD4PK1oqbkadZX">
+                            <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <Choice Kind="OperationCallFlag" Name="+" />
+                            </p:NodeReference>
+                            <Pin Id="LQb4wy5F0maOMrpqQK44Ec" Name="Input" Kind="InputPin" />
+                            <Pin Id="N5b7cG0aOHtO7JrXyMslSD" Name="Input 2" Kind="InputPin" />
+                            <Pin Id="BKfLkF8N9pmNEKpx5GUkk4" Name="Output" Kind="OutputPin" />
+                          </Node>
+                          <Node Bounds="194,1397,31,19" Id="KgYvmk8vZdXPK3646rxv4i">
+                            <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <Choice Kind="OperationCallFlag" Name="&lt;=" />
+                            </p:NodeReference>
+                            <Pin Id="HlD1oYtaBbyL2W3Jm7IQrQ" Name="Input" Kind="InputPin" />
+                            <Pin Id="KuB2ZmJHdYuPK1zRgYv51z" Name="Input 2" Kind="InputPin" />
+                            <Pin Id="TbDmTqPh61gPqYrlwSBPsS" Name="Result" Kind="OutputPin" />
+                          </Node>
+                          <Pad Id="Jk2UPcqEg52PpQm7uL49TP" Comment="" Bounds="222,1387,35,15" ShowValueBox="true" isIOBox="true" Value="7">
+                            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="TypeFlag" Name="Integer32" />
+                            </p:TypeAnnotation>
+                          </Pad>
+                        </Patch>
+                        <ControlPoint Id="P0grKs6IqoTPLKNsCZEmGU" Bounds="196,1337" Alignment="Top" />
+                        <ControlPoint Id="P4yDms1AelOMJ1cFREpleJ" Bounds="216,1337" Alignment="Top" />
+                        <ControlPoint Id="QZ9rGg0uDOBMQZbKL3Zx45" Bounds="196,1430" Alignment="Bottom" />
+                      </Node>
+                      <Node Bounds="194,1457,55,38" Id="DJDgon3e74rQMjQeHC6yKC">
+                        <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                          <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
+                          <Choice Kind="OperationCallFlag" Name="All" />
+                        </p:NodeReference>
+                        <Pin Id="VAnik3jJLpsOK6QE7ykWJ3" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="N9ChikWCokfO4z7DOSy9qA" Name="Result" Kind="OutputPin" />
+                        <Patch Id="LmeZjPYP6tLOyRJwIpZe2X" Name="Predicate" ManuallySortedPins="true">
+                          <Pin Id="KgEiOgC2lHLOniCAjlf84d" Name="Input" Kind="InputPin" />
+                          <Pin Id="UNrmxataA2wPJTnfjWWHRY" Name="Result" Kind="OutputPin" />
+                          <ControlPoint Id="MaEIKFSQ1lFNxIIEtqGSd2" Bounds="198,1465" />
+                          <ControlPoint Id="DsYEVDPJRSmLwOjcWwfo0z" Bounds="198,1488" />
+                        </Patch>
+                      </Node>
+                      <Node Bounds="318,1527,54,80" Id="JUJTTLYwy0BNRx3hpdSiXP">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                          <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                          <CategoryReference Kind="Category" Name="Primitive" />
+                          <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                        </p:NodeReference>
+                        <Pin Id="DZCrc9FYN4QQW1FO8EKz39" Name="Condition" Kind="InputPin" />
+                        <Patch Id="DrlSJMix3AMQLYTLMWmLFM" ManuallySortedPins="true">
+                          <Patch Id="EoqXFvVB9p7ONZyfu4sDIv" Name="Create" ManuallySortedPins="true" />
+                          <Patch Id="FjJ65zn1xDfOtEYS0g30Td" Name="Then" ManuallySortedPins="true" />
+                          <Node Bounds="330,1559,30,19" Id="UCEBXBd7FtwLEsRTsGB8x6">
+                            <p:NodeReference LastCategoryFullName="Primitive.Integer32" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <CategoryReference Kind="Int32Type" Name="Integer32" NeedsToBeDirectParent="true" />
+                              <Choice Kind="OperationCallFlag" Name="Inc" />
+                            </p:NodeReference>
+                            <Pin Id="IbVccQfT3ZJN9gZbZE6Uc0" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="HGTYk80uSn2N0cfoeLFbJV" Name="Output" Kind="StateOutputPin" />
+                          </Node>
+                        </Patch>
+                        <ControlPoint Id="BHC6S8yZCH1Pfi5JqPH8mP" Bounds="332,1533" Alignment="Top" />
+                        <ControlPoint Id="BMrMJ3y0zz7PSiX2tjfeYM" Bounds="332,1601" Alignment="Bottom" />
+                      </Node>
+                    </Patch>
+                    <ControlPoint Id="ITdSt1TnnAYMs9UzRWRW3S" Bounds="192,1247" Alignment="Top" />
+                    <ControlPoint Id="MlZXxDylB9fNzbarHqm7vw" Bounds="332,1247" Alignment="Top" />
+                    <ControlPoint Id="CBLOJw748NDM95ZgorcKPb" Bounds="332,1621" Alignment="Bottom" />
+                  </Node>
+                  <Node Bounds="30,1277,52,19" Id="NyClCnxX49nMZYDZ8jFeHR">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="GetSlice" />
+                    </p:NodeReference>
+                    <Pin Id="H8QqCVkgQH7MMr6V5nGmHO" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="KyKiC3aiRcPL3hcaRQ2Reu" Name="Default Value" Kind="InputPin" />
+                    <Pin Id="Cw1idU6ZygjPGoCPP9maPX" Name="Index" Kind="InputPin" />
+                    <Pin Id="IycgzcnDQKJLIuFNkqSnQ1" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <ControlPoint Id="PefRexUznEsOsjGOJ3z90U" Bounds="145,1215" />
+                </Patch>
+                <ControlPoint Id="VCiq1xX9lhNOeyd1ThON1B" Bounds="79,1198" Alignment="Top" />
+                <ControlPoint Id="RbmMUWEiGbvPPIeLyrXUUZ" Bounds="332,1198" Alignment="Top" />
+                <ControlPoint Id="DFit4qntMLgPcLaAUphiUT" Bounds="332,1641" Alignment="Bottom" />
+              </Node>
+              <Pad Id="SuTXOlG0sF7LRzsMCG12mk" Comment="Sum" Bounds="332,1168,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Link Id="F5DnF6wcfRQLM2CEbhL4DW" Ids="VCiq1xX9lhNOeyd1ThON1B,Cw1idU6ZygjPGoCPP9maPX" />
+              <Link Id="KTAdEOplnKbLY2R90wX7xh" Ids="ITdSt1TnnAYMs9UzRWRW3S,Ss5O83beY96O5dvoBHnh1e" />
+              <Link Id="GzjWFDkH039LuoaD78Uekp" Ids="IycgzcnDQKJLIuFNkqSnQ1,P0grKs6IqoTPLKNsCZEmGU" />
+              <Link Id="KLX5N7RJvSKLQjeU0svTyy" Ids="Kolcy4y6nkkN5RzgrB4Uqc,P4yDms1AelOMJ1cFREpleJ" />
+              <Link Id="UVKAPGQCK6eLJBqsJJq2P3" Ids="P4yDms1AelOMJ1cFREpleJ,N5b7cG0aOHtO7JrXyMslSD" />
+              <Link Id="BXZNRjTgAXmPzDpJ0oh77J" Ids="P0grKs6IqoTPLKNsCZEmGU,LQb4wy5F0maOMrpqQK44Ec" />
+              <Link Id="GbTn8gHAob0MRI9m2wIl1N" Ids="BKfLkF8N9pmNEKpx5GUkk4,HlD1oYtaBbyL2W3Jm7IQrQ" />
+              <Link Id="D4lM8c6lA7KOPitaUopKk1" Ids="Jk2UPcqEg52PpQm7uL49TP,KuB2ZmJHdYuPK1zRgYv51z" />
+              <Link Id="OM1OJ3le9W5M36NDeWy1Wz" Ids="TbDmTqPh61gPqYrlwSBPsS,QZ9rGg0uDOBMQZbKL3Zx45" />
+              <Link Id="JaRCLjoykSJOaWBosYTF6r" Ids="KgEiOgC2lHLOniCAjlf84d,MaEIKFSQ1lFNxIIEtqGSd2" IsHidden="true" />
+              <Link Id="U75FH5mFGcXNIE3QN0JKcr" Ids="DsYEVDPJRSmLwOjcWwfo0z,UNrmxataA2wPJTnfjWWHRY" IsHidden="true" />
+              <Link Id="EMDRmLzurFELRI7WKu87bA" Ids="QZ9rGg0uDOBMQZbKL3Zx45,VAnik3jJLpsOK6QE7ykWJ3" />
+              <Link Id="NQNwvcOSeqPLrLi1DRKOn2" Ids="MaEIKFSQ1lFNxIIEtqGSd2,DsYEVDPJRSmLwOjcWwfo0z" />
+              <Link Id="AAdROUKDbT4QD1rLBVWClw" Ids="N9ChikWCokfO4z7DOSy9qA,DZCrc9FYN4QQW1FO8EKz39" />
+              <Link Id="HfDD4McT6A2LwGV2R6aScF" Ids="BHC6S8yZCH1Pfi5JqPH8mP,BMrMJ3y0zz7PSiX2tjfeYM" IsFeedback="true" />
+              <Link Id="H6H4vCQYT2rPPaU5QPg7kZ" Ids="BHC6S8yZCH1Pfi5JqPH8mP,IbVccQfT3ZJN9gZbZE6Uc0" />
+              <Link Id="B1K3xbbDdcOM50oyEhM3cz" Ids="MlZXxDylB9fNzbarHqm7vw,CBLOJw748NDM95ZgorcKPb" IsFeedback="true" />
+              <Link Id="Fs9AXtOchGzP4zFhRnxBjz" Ids="MlZXxDylB9fNzbarHqm7vw,BHC6S8yZCH1Pfi5JqPH8mP" />
+              <Link Id="UsPo9QGtnF6LbJldktn5EL" Ids="RbmMUWEiGbvPPIeLyrXUUZ,DFit4qntMLgPcLaAUphiUT" IsFeedback="true" />
+              <Link Id="M9yNDvrNt9eOBMbPHF4iCT" Ids="RbmMUWEiGbvPPIeLyrXUUZ,MlZXxDylB9fNzbarHqm7vw" />
+              <Link Id="SABVS8ihIjUMXK4yxbOOLy" Ids="SuTXOlG0sF7LRzsMCG12mk,RbmMUWEiGbvPPIeLyrXUUZ" />
+              <Link Id="Lnsmn6EM5MhLR5j7fyG8D1" Ids="HGTYk80uSn2N0cfoeLFbJV,BMrMJ3y0zz7PSiX2tjfeYM" />
+              <Link Id="Q9gGzISuOnpOhZqCwwcTRp" Ids="BMrMJ3y0zz7PSiX2tjfeYM,CBLOJw748NDM95ZgorcKPb" />
+              <Link Id="LAszKhqCgusOv4iLPuBffy" Ids="CBLOJw748NDM95ZgorcKPb,DFit4qntMLgPcLaAUphiUT" />
+              <Pin Id="TQLHGXgw7oPOjWCMQ5iULQ" Name="KeysAndLocks" Kind="InputPin" />
+              <ControlPoint Id="Aeqf6kZbizqMm6E2P0S4hs" Bounds="32,1161" />
+              <Link Id="LqtJ1ZRdgIPNpqpB2KaerC" Ids="TQLHGXgw7oPOjWCMQ5iULQ,Aeqf6kZbizqMm6E2P0S4hs" IsHidden="true" />
+              <ControlPoint Id="Opdx2gZdHSnLj79F474E4w" Bounds="79,1171" />
+              <ControlPoint Id="KHdDxcJ1nfCNrmzEEtk6DN" Bounds="192,1180" />
+              <Pin Id="Vrhpqp4D3ZSMJdcRYa2PHA" Name="KeysIdx" Kind="InputPin" />
+              <Link Id="Fjyqe3frUHPOIaYdno8LsU" Ids="Vrhpqp4D3ZSMJdcRYa2PHA,Opdx2gZdHSnLj79F474E4w" IsHidden="true" />
+              <Pin Id="KYTA7cNJogmMXpjcorT6nv" Name="LocksIdx" Kind="InputPin" />
+              <Link Id="H6LAiJgHojLN2UQXzfEEJu" Ids="KYTA7cNJogmMXpjcorT6nv,KHdDxcJ1nfCNrmzEEtk6DN" IsHidden="true" />
+              <Link Id="MlCdIvKnnjqNwpzIEenckz" Ids="Aeqf6kZbizqMm6E2P0S4hs,H8QqCVkgQH7MMr6V5nGmHO" />
+              <Link Id="Qzqpg3YnUhRPTVAuP4lFgK" Ids="Aeqf6kZbizqMm6E2P0S4hs,PefRexUznEsOsjGOJ3z90U,Bac3QYKqOd3OR84PFGu7Eu" />
+              <Link Id="GstyzXxpA0OOiVcf8MWakK" Ids="Opdx2gZdHSnLj79F474E4w,VCiq1xX9lhNOeyd1ThON1B" />
+              <Link Id="CqZ3LO3WKcfM4rcPLVNhrL" Ids="KHdDxcJ1nfCNrmzEEtk6DN,ITdSt1TnnAYMs9UzRWRW3S" />
+              <Pin Id="BVz4Ro4EzgfQFSAsXrFGSS" Name="Result" Kind="OutputPin" />
+              <ControlPoint Id="FdT62T4lSKjPBiFzeLAxWI" Bounds="332,1690" />
+              <Link Id="B3fNXh7vsmQPeLEuUbOp0E" Ids="FdT62T4lSKjPBiFzeLAxWI,BVz4Ro4EzgfQFSAsXrFGSS" IsHidden="true" />
+              <Link Id="N90frogGqfMNSqCgKI7J7A" Ids="DFit4qntMLgPcLaAUphiUT,FdT62T4lSKjPBiFzeLAxWI" />
+            </Patch>
+          </Node>
+          <Node Bounds="495,1560,121,19" Id="B6cJeaaa6X3ODPtDvvCXNM">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="aoc2024_25_1.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="CalculateCombinations" />
+            </p:NodeReference>
+            <Pin Id="Kly6VTIqnnkP1vRJ6EU4G3" Name="KeysAndLocks" Kind="InputPin" />
+            <Pin Id="BlAlI2twPlJLTs8xs4bJ4R" Name="KeysIdx" Kind="InputPin" />
+            <Pin Id="Ga7XzUoIhcCPGJMkwbrJpd" Name="LocksIdx" Kind="InputPin" />
+            <Pin Id="AR75kZxR8i2OX284uXihN0" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JSVQ2tv9a9yLI6kk9aBfhC" Comment="Result" Bounds="497,1701,37,15" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="Q1b3K1bm6zqNjh9sEv9EWV" Name="Create" />
+        <Patch Id="B891Q4q8eXELcsEoE0fqpC" Name="Update" />
+        <ProcessDefinition Id="N0lNmVUWENcM6l8kDH1Khf">
+          <Fragment Id="Cf0Ye6aVVHLMxP09MXYuBM" Patch="Q1b3K1bm6zqNjh9sEv9EWV" Enabled="true" />
+          <Fragment Id="S3Am92N3fVbPtD9MnxRT2g" Patch="B891Q4q8eXELcsEoE0fqpC" Enabled="true" />
+          <Fragment Id="GrqP4sXe3YhMi30ble4EXg" Patch="FG0UKtJJTgWO20yQK5ae41" />
+        </ProcessDefinition>
+        <Link Id="LC2nNw3bAlAOhxjLo0vkGU" Ids="UV9dCzzVMD1PG1aCSpDS5G,DsnYl5c6S1aMikWw9PJB7m" />
+        <Link Id="PnpXfasa5zXQcnVFyWpxqo" Ids="AtPPv4dKaEgLknoGgFSRnQ,FTBMieU7gn1MCCOov2qthV" />
+        <Link Id="SxCl8QlsqVfOS7yeoRXKzM" Ids="JoPvRwCwQbjQByRauLrdma,NmrRbdSAoo6PyxffkcJePe" />
+        <Link Id="O5dtj6VvjUQMRuCmfbpFlH" Ids="ObzWKB1aFBZPoRTCwXGuV7,J6aQ51t70QEQEqAtqS34PE" />
+        <Link Id="VYX5OnoPhPAMUt9SKbJfrI" Ids="OA8p88CvOODQAmLNcX9B4j,GQ6FXL1ZZOTNKtenIJ5OYZ" />
+        <Link Id="AnX35QiJfuMLFivf3li33V" Ids="QLCil5sYrWiMObJVpJxZ1s,J2Lr8ZITH1HPRze8KxJNZR" IsFeedback="true" />
+        <Link Id="E277V34KLQoM5D7R418BVj" Ids="O78YubXfR3fN7rpYY3GyRq,QLCil5sYrWiMObJVpJxZ1s" />
+        <Link Id="HUFHBXuQ2dlMSo9nTt5ppD" Ids="NmrRbdSAoo6PyxffkcJePe,FsD9pl5gDrjOMzizxLbsBH" />
+        <Link Id="MqCnh9wNKenOiMUgCZuBJh" Ids="CIjNLRR0CwSOAj87szdhY9,U1BX0GIl8uhP56tOgSzmRx" />
+        <Link Id="C09P92f3Ik9L4yQsoTVMla" Ids="S1HLJIE7KUePemW7JCOAsY,RLDPh0rItHzO7q6iDbYmtO" IsFeedback="true" />
+        <Link Id="QmkXdaz4jocNFmGbbjK4FZ" Ids="QLCil5sYrWiMObJVpJxZ1s,S1HLJIE7KUePemW7JCOAsY" />
+        <Link Id="DpuOz1U2gpxPBzKEMxo9dC" Ids="J2Lr8ZITH1HPRze8KxJNZR,OA8p88CvOODQAmLNcX9B4j" />
+        <Link Id="IOcOvC5DeouMjF4JpWFLUi" Ids="RLDPh0rItHzO7q6iDbYmtO,J2Lr8ZITH1HPRze8KxJNZR" />
+        <Link Id="CFBY9W2UEtLPrxC4l56x4g" Ids="CIeYZCiit8AOfVRDbKGC9w,NQ2Y570XJToOvwMkEwrqZU" />
+        <Link Id="MMHCYPxru4rL2bsM7MBOL0" Ids="GtRWy3FkQhzLF26tyjpJog,HrYOaTiGENANRj8UnlvCs2" />
+        <Link Id="VJMKXALU8ztPKiIU1hsYUF" Ids="HrYOaTiGENANRj8UnlvCs2,CIeYZCiit8AOfVRDbKGC9w" />
+        <Link Id="COGr98ymbXbNRsdxfWPkSI" Ids="HPb6HI1LvkfP5lHwiYCJLJ,PS4iJCSUQvtLWpWPZl38HJ" />
+        <Link Id="DeokQRbZfc6OC0M4CXpbhE" Ids="Aiig4S3IkPkNbzZHhzeU3h,DLBHUnojcwtM610TWGV3qv" IsHidden="true" />
+        <Link Id="GQArewFDZPMNBXnv6mjOSw" Ids="NQ2Y570XJToOvwMkEwrqZU,C90vTxk7XFtQLGPsGNJL4z" />
+        <Link Id="PaGNB5bnjPJMlXpiJx37tG" Ids="DhMNBkt28UZQR9ElDCV3HU,MntWJvWAc18PwF7t4WiQZR" />
+        <Link Id="MpUcdWjnZ7hLiLOxzEtSCZ" Ids="MojkZEvnSCOOzwuttiHxbc,E6B9Y8X74HhMp4ekxZcced" />
+        <Link Id="Ks51sXqpYgrPjA7OpsCdRX" Ids="BairZi45p3gNryX2PB90Ny,Vuya8ECyBydOol4REs7bmu" />
+        <Link Id="GAm0Zj9C3kTMJcwGR4598M" Ids="QYVOVoUwOEfLATzXLml1p4,J397dc231rkOrtZvxfXEBe" />
+        <Link Id="HcJUp1Q3xv5NXC88LA6iTV" Ids="KvUMZEnmLltLBBBl6JvktV,N3J4ItoSo3DMTnPXHfqxew" />
+        <Link Id="GarZgUPtciXM3eehgGJAfe" Ids="DLBHUnojcwtM610TWGV3qv,F8y3KwuLaiZMg07uC4yGgP" />
+        <Link Id="O1uc3yayvlFMdEsoENJ6qC" Ids="DLBHUnojcwtM610TWGV3qv,KuLRyPXsBASLa1NIIqGLca" />
+        <Link Id="OAdl9VLquQpLc1Lgn0eRDt" Ids="ITtC2zvjkwbM6dfbbxYxYK,GoJgq8vlmDzMR9hQm1m96d" IsFeedback="true" />
+        <Link Id="P7jXW7Y8kKHNdl6WNIHRf0" Ids="Et2g14NTEDANMaepG72pbb,GoJgq8vlmDzMR9hQm1m96d" />
+        <Link Id="PjWFKSU55yXL4LfYR9dhdu" Ids="GoJgq8vlmDzMR9hQm1m96d,RLDPh0rItHzO7q6iDbYmtO" />
+        <Link Id="EGajcl81JqGNjEtJYYHyEN" Ids="S1HLJIE7KUePemW7JCOAsY,ITtC2zvjkwbM6dfbbxYxYK" />
+        <Link Id="EUJV3tUyOLbNsew3YDjNkU" Ids="ITtC2zvjkwbM6dfbbxYxYK,Fyutv43xjXDOZhq151xtGh" />
+        <Link Id="UoRvZTsDJpyN2O4IIsDynh" Ids="HrYOaTiGENANRj8UnlvCs2,VasysGhUHnQNzC6lz6g0UD" />
+        <Link Id="C4u2wYMbunyLW4ecMzxDEE" Ids="MOTZwqaGB4BLNbZRxUf86z,QsbH8B12hb6OLDSowfp0oN" />
+        <Link Id="PBc1VeKsYr7LlGiJ3GOvFs" Ids="HLT6AQNPU0NOueVG20Z7zk,FldVWcX8OhJMOwRXy7RWtO" />
+        <Link Id="ByCTubdfkJMLo8Fzp7a1Cy" Ids="VyCoZwyr9eKLEgqkQKTyX4,R3JbLsa4jAcNhi9ypbs6xB" />
+        <Link Id="LEp5skm0ZM4PE0fa7nKnj9" Ids="CB6HvyRrVFDPHhgHs645ez,MvZtUUYvMtvPB1x32Yrt2T" />
+        <Link Id="OnONYZ62U4cPvz64PmFaqM" Ids="MvZtUUYvMtvPB1x32Yrt2T,Fe4HIVcjmp9MZ8au9LsGXv" />
+        <Link Id="B8xmkqSSwqFQcdtRMfY4hT" Ids="Fe4HIVcjmp9MZ8au9LsGXv,LPS00nHJgKMQMIEfRxLhPU" />
+        <Link Id="UHRgItBUdxtNbkSuEfW7L2" Ids="VcbuhiVNu8aLlpUuby5Saj,BVTzb1sIcsINp5AQAyO0Cp" IsFeedback="true" />
+        <Link Id="KU9CDRX7RTvMk3ZHWl0qAE" Ids="Gh4IFmcfZ4NLSxXSVuosdo,VcbuhiVNu8aLlpUuby5Saj" />
+        <Link Id="TGeg0SaGoamOi20xXKPdVa" Ids="VcbuhiVNu8aLlpUuby5Saj,BVTzb1sIcsINp5AQAyO0Cp" />
+        <Link Id="BXUcBQTYPJyNmJyLXoiVwe" Ids="VcbuhiVNu8aLlpUuby5Saj,TrxxTByNAByMHsk91DF1r0" />
+        <Link Id="OOw8LSI5vWAOaikrXbiehK" Ids="GS4QXftDiRRMAzLHPCajJr,OSVQMxdvUgBQNhMlcjsB4Q" IsFeedback="true" />
+        <Link Id="HBXjdGQ0Q8nP7rV1dcWPaB" Ids="KKebBUqL3giQYEaJetefGU,GS4QXftDiRRMAzLHPCajJr" />
+        <Link Id="PpDAtP5VHDsLXhHWPWQ4bd" Ids="GS4QXftDiRRMAzLHPCajJr,MOhCBhNWXwFPMd4Rb34ESH" />
+        <Link Id="DwZYckI8urEODAK8v2lDP5" Ids="GehBa3FYYVpPai2ssNdRqt,NIrMDohbm0mNY5aeSdD1pe" />
+        <Link Id="LgxdIGQMaWoOz7aPPuC4PJ" Ids="MqXeQDGKgpxMIJUmJO6Xjc,KESbjUEb0FgLevOkzI4f1R" IsHidden="true" />
+        <Link Id="D9aYtsFmXAHNYo0Hj5AXy3" Ids="KESbjUEb0FgLevOkzI4f1R,AEj7JYzcWw9OCyvjVk8FCG" />
+        <Link Id="S2Cy7PiQYmvNYkw5hxsTAk" Ids="OSVQMxdvUgBQNhMlcjsB4Q,R6aAc6XsZIkOF2SiaEP2H5" />
+        <Link Id="SQfamgAMyWENYw3hR1fWqI" Ids="BVTzb1sIcsINp5AQAyO0Cp,H6nbsErtZwBNa8IZOcz3Oj" />
+        <Link Id="GF9k02fgg4CQLsmpCLuxbp" Ids="GS4QXftDiRRMAzLHPCajJr,OSVQMxdvUgBQNhMlcjsB4Q" />
+        <Link Id="BABk9dYUBPePBFGzQf3uFg" Ids="LPS00nHJgKMQMIEfRxLhPU,DdaKSKDhXnLNq7HPGDisAm" />
+        <Link Id="I4M90v6pUQZOsI0H1ZX5ep" Ids="GQ6FXL1ZZOTNKtenIJ5OYZ,Kly6VTIqnnkP1vRJ6EU4G3" />
+        <Link Id="E6uYKyncK3FNyb7hPMEFR9" Ids="H6nbsErtZwBNa8IZOcz3Oj,BlAlI2twPlJLTs8xs4bJ4R" />
+        <Link Id="AUPYNABVqpPL90Okbq1LBd" Ids="R6aAc6XsZIkOF2SiaEP2H5,Ga7XzUoIhcCPGJMkwbrJpd" />
+        <Link Id="QZAWeIyolywPsVsJcORAfd" Ids="AR75kZxR8i2OX284uXihN0,JSVQ2tv9a9yLI6kk9aBfhC" />
+      </Patch>
+    </Node>
+  </Patch>
+</Document>

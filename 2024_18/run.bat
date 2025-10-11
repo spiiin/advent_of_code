@@ -1,0 +1,1 @@
+dotnet run --project aoc18.csproj -- 71 1024 < input.txt
