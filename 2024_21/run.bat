@@ -1,0 +1,1 @@
+python aoc21_2.py < input.txt
